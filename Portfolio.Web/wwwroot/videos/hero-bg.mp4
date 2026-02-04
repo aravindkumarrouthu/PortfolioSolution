@@ -1,0 +1,6 @@
+﻿namespace Portfolio.Web.wwwroot.videos
+{
+    public class hero_bg
+    {
+    }
+}

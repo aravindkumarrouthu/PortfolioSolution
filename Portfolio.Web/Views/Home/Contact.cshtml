@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h1 class="text-center fw-bold mb-4">Contact Me</h1>
+        <p class="text-center text-muted mb-5">
+            Feel free to reach out for opportunities or collaborations.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                @if (ViewBag.Success != null)
+                {
+                    <div class="alert alert-success text-center">
+                        @ViewBag.Success
+                    </div>
+                }
+
+                <form method="post">
+
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text"
+                               name="name"
+                               class="form-control"
+                               placeholder="Enter your name"
+                               required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email"
+                               name="email"
+                               class="form-control"
+                               placeholder="Enter your email"
+                               required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea name="message"
+                                  class="form-control"
+                                  rows="5"
+                                  placeholder="Enter your message"
+                                  required></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            Send Message
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
